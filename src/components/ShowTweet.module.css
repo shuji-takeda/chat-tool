@@ -17,19 +17,19 @@
 .post_headerUser {
   font-weight: 600;
   font-size: 18px;
-  color: white;
+  color: rgb(8, 8, 8);
   margin-right: 12px;
 }
 .post_headerTime {
   font-size: 14px;
-  color: gray;
+  color: rgb(7, 7, 7);
 }
 .post_tweet {
   margin-bottom: 10px;
   font-size: 15px;
 }
 .post_tweet > p {
-  color: whitesmoke;
+  color: rgb(7, 7, 7);
   font-size: 20px;
 }
 .post_tweetImage {
@@ -44,7 +44,7 @@
 }
 .post_commentIcon {
   margin-top: 15px;
-  color: whitesmoke;
+  color: rgb(7, 7, 7);
   cursor: pointer;
 }
 .post_comment {
@@ -56,12 +56,12 @@
 .post_commentUser {
   font-weight: 600;
   font-size: 16px;
-  color: white;
+  color: rgb(7, 7, 7);
   margin-right: 12px;
 }
 .post_commentText {
   font-size: 15px;
-  color: whitesmoke;
+  color: rgb(7, 7, 7);
   margin-right: 10px;
 }
 .post_form {
@@ -78,7 +78,7 @@
 }
 .post_button {
   border: none;
-  color: whitesmoke;
+  color: rgb(7, 7, 7);
   background-color: transparent;
   cursor: pointer;
 }

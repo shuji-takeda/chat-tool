@@ -1,47 +1,44 @@
-import React , {useEffect} from 'react';
-import { selectUser , login , logout } from './redux/userSlice';
-import { useSelector, useDispatch } from 'react-redux';
-import './App.css';
- import {auth} from "./firebase";
-import Auth from './components/Auth';
-import Main from './components/Main';
+import React, {useEffect} from "react";
+import {selectUser, login, logout} from "./redux/userSlice";
+import {useSelector, useDispatch} from "react-redux";
+import styles from "./App.module.css";
+import {auth} from "./firebase";
+import Auth from "./components/Auth";
+import Main from "./components/Main";
 
-const App:React.FC = () => {
+const App: React.FC = () => {
   const user = useSelector(selectUser);
   const dispatch = useDispatch();
 
-  useEffect(()=>{
-    const unSub = auth.onAuthStateChanged((authUser) =>{
-      if (authUser){
+  useEffect(() => {
+    const unSub = auth.onAuthStateChanged((authUser) => {
+      if (authUser) {
         dispatch(
           login({
-            uid:authUser.uid,
-            userName:authUser.displayName,
-            avatarImage:authUser.photoURL,
+            uid: authUser.uid,
+            userName: authUser.displayName,
+            avatarImage: authUser.photoURL,
           })
-        )
+        );
       } else {
-        dispatch(
-          logout()
-        )
+        dispatch(logout());
       }
-    })
-    return ()=>{
+    });
+    return () => {
       unSub();
-    }
-  },[dispatch])
+    };
+  }, [dispatch]);
   return (
     <>
-    {user.uid ? (
-    <div className="App">
-      <Main />
-      </div>
-      )
-      :
-      <Auth />
-      }
-      </>
+      {user.uid ? (
+        <div className={styles.app}>
+          <Main />
+        </div>
+      ) : (
+        <Auth />
+      )}
+    </>
   );
-}
+};
 
 export default App;

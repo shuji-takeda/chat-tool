@@ -2,6 +2,9 @@
 
 ### "Chat-App" is a Communication tool with React-Redux.<br> I created to learn React-Redux , Firebase. <br> If you wanna learn React-Redux , Firebase like I do , this project will definitely help you in your learning.
 
+This tutorial was originaly posted [here](https://www.udemy.com/share/103Q1O2@PUdgVGJKc1QLe05FBHZwRj5uY1Ri/)
+Thanks Kazu!
+
 # Features
 
 - React
